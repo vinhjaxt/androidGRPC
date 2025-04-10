@@ -28,7 +28,8 @@ jobs:
       run: |
         chmod +x gradlew
         ./gradlew build
-        find . -type f
+        # find . -type f
+        zip -r outputs.zip ./app/build/outputs
 
     # Create release
     - name: Generate release tag
